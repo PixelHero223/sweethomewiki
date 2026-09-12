@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-container">
+    <a href="/skills" class="back-btn">← Все навыки</a>
+
+    <article class="wiki-article">
+        <h1><img src="{{ url_for('static', filename='icons/skill/hoe.png') }}" alt="" class="card-icon"> Навык: Фермер (Farming)</h1>
+        <p class="subtitle">Собирайте урожай на фермах, чтобы зарабатывать опыт!</p>
+
+        <hr>
+
+        <h2>Повышаемые характеристики:</h2>
+        <ul>
+            <li><strong style="color: #ff5555;">Здоровье</strong></li>
+            <li><strong style="color: #ffaa00;">Сила</strong></li>
+        </ul>
+        <a href="/stats" class="btn-stats" style="display: inline-block; margin-top: 10px; padding: 8px 14px; background: rgba(0, 170, 255, 0.15); border: 1px solid #00aaff; color: #00aaff; border-radius: 6px; text-decoration: none; font-size: 0.9em; transition: 0.2s;">
+            🔍 Подробнее о характеристиках
+        </a>
+
+        <h2>Пассивные способности навыка:</h2>
+        <ul class="rules-list">
+            <li><strong>Обильный урожай:</strong> Даёт +10 Фермерской Удачи, которая повышает шанс получить дополнительный дроп при сборе урожая.</li>
+            <li><strong>Фермер:</strong> Увеличивает количество получаемого опыта навыка (XP) в сельском хозяйстве на 10%.</li>
+            <li><strong>Мастер косы:</strong> Увеличивает урон при использовании мотыги на 3%.</li>
+            <li><strong>Генетик:</strong> Увеличивает насыщение от поедания растительных продуктов на 1 unit.</li>
+            <li><strong>Аура взращивания:</strong> Посадки на стадии роста в радиусе 30 блоков от вас растут на 12% быстрее.</li>
+        </ul>
+
+        <h2>Мана-способность: Комбайнер</h2>
+        <p>Автоматизация сбора и посадки культур для быстрой работы на больших полях.</p>
+        
+        <div class="code-block">
+            • <strong>Активация:</strong> Нажмите <code>Щелчок ПКМ</code> мотыгой и сломайте посев.<br>
+            • <strong>Эффект:</strong> Автоматически пересаживает сломанные посевы в течение 5 секунд.<br>
+            • <strong>Механика:</strong> Экономит время и семена при массовом сборе урожая.
+        </div>
+
+        <h2>🏆 Топ культур для прокачки Фермера (1-3 место):</h2>
+        <ul class="rules-list">
+            <li><strong>🥇 1 место — Факельник </strong> Дает 9 опита</li>
+            <li><strong>🥈 2 место — Грибы</strong> Дают 7 опита</li>
+            <li><strong>🥉 3 место — Кактус</strong> Дает 6 опита</li>
+        </ul>
+
+    </article>
+</div>
+
+{% endblock %}

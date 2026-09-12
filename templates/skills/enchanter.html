@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-container">
+    <a href="/skills" class="back-btn">← Все навыки</a>
+
+    <article class="wiki-article">
+        <h1><img src="{{ url_for('static', filename='icons/skill/enchantment.png') }}" alt="" class="card-icon"> Навык: Зачарователь (Enchanting)</h1>
+        <p class="subtitle">Зачаровывайте, комбинируйте предметы, используйте точильный камень, чтобы заработать очки Зачарования ОПЫТ!</p>
+
+        <hr>
+
+        <h2>Повышаемые характеристики:</h2>
+        <ul>
+            <li><strong style="color: #0000aa;">Мудрость</strong></li>
+            <li><strong style="color: #55ff55;">Удача</strong></li>
+        </ul>
+        <a href="/stats" class="btn-stats" style="display: inline-block; margin-top: 10px; padding: 8px 14px; background: rgba(0, 170, 255, 0.15); border: 1px solid #00aaff; color: #00aaff; border-radius: 6px; text-decoration: none; font-size: 0.9em; transition: 0.2s;">
+            🔍 Подробнее о характеристиках
+        </a>
+
+        <h2>Пассивные способности навыка:</h2>
+        <ul class="rules-list">
+            <li><strong>Конвертировать XP:</strong> Позволяет конвертировать базовый опыт Minecraft в опыт навыков.</li>
+            <li><strong>Чародей:</strong> Увеличивает количество получаемого опыта навыка (XP) на 10% за уровень.</li>
+            <li><strong>Мастер наковальни:</strong> Увеличивает лимит максимальной стоимости починки и объединения предметов на наковальне.</li>
+            <li><strong>Зачарованная сила:</strong> Повышает показатель «Сила» за каждые зачарования на экипированном снаряжении (+0.5 Силы за чары).</li>
+            <li><strong>Счастливый стол:</strong> Даёт шанс (+3% за уровень) получить более высокий уровень зачарования при работе за столом зачарования.</li>
+        </ul>
+
+        <h2>🏆 Топ способов прокачки Зачарователя (1-3 место):</h2>
+        <ul class="rules-list">
+            <li><strong>🥇 1 место — Снять зачарования в точильном камне:</strong> ОПЫТ: 36/Уровень зачарования предмета</li>
+            <li><strong>🥈 2 место — Совместить инструмент c книгой зачарования:</strong> ОПЫТ: 30/Цена опыта наковальни</li>
+            <li><strong>🥉 3 место — Зачаровать книгу:</strong> ОПЫТ: 30/Уровень полученного зачарования</li>
+        </ul>
+
+        <div class="tip-box">
+            <strong>Совет по прокачке:</strong><br>
+            Используйте ферму опыта (на мобах или кварце), зачаровывайте книги на 30 уровень, а затем сбрасывайте чары на точильном камне — это самый эффективный цикл прокачки!
+        </div>
+    </article>
+</div>
+
+{% endblock %}

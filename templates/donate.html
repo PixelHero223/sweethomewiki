@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-container">
+    <a href="/" class="back-btn">← На главную</a>
+
+    <article class="wiki-article">
+        <h1><img src="{{ url_for('static', filename='icons/index/star.png') }}" alt="" class="card-icon"> Донат-статусы и привилегии</h1>
+        <p class="subtitle">Поддержите развитие сервера SWEETHOME и получите уникальные возможности!</p>
+
+        <hr>
+
+        <div class="donate-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 25px;">
+
+            <!-- Prime -->
+            <div class="donate-card" style="background: rgba(20, 20, 30, 0.8); border: 1px solid #3366ff; border-radius: 12px; padding: 20px; text-align: center;">
+                <img src="{{ url_for('static', filename='Statys/prime.png') }}" alt="Prime" style="width: 100%; max-width: 180px; border-radius: 8px; margin-bottom: 15px;">
+                <h2 style="color: #3388ff; margin: 5px 0;">PRIME</h2>
+                <div style="font-size: 1.4rem; font-weight: bold; color: #55ff55; margin-bottom: 10px;">$2.00</div>
+                <p style="color: #aaaaaa; font-style: italic; font-size: 0.9rem;">Отличный выбор для старта!</p>
+
+                <ul style="text-align: left; margin: 15px 0; padding-left: 20px; line-height: 1.6; font-size: 0.95rem;">
+                    <li><strong>Приваты:</strong> 3 (макс. 30 000 блоков)</li>
+                    <li><strong>Точки дома:</strong> 3 sethome</li>
+                    <li><strong>Префикс:</strong> <code>[Prime]</code></li>
+                    <li><strong>Команды:</strong> <code>/hat</code>, <code>/workbench</code></li>
+                    <li><strong>Опыт AuraSkills:</strong> +2% к опыту</li>
+                    <li><strong>Наборы:</strong> Стартовый набор (<code>kit Prime</code>)</li>
+                    <li><strong>Дополнительно:</strong> Кастомизация</li>
+                    <li><strong>Бонус сайта:</strong> 🎁 50 SweetCoin</li>
+                </ul>
+            </div>
+
+            <!-- Legend -->
+            <div class="donate-card" style="background: rgba(20, 20, 30, 0.8); border: 1px solid #aa33ff; border-radius: 12px; padding: 20px; text-align: center;">
+                <img src="{{ url_for('static', filename='Statys/legend.png') }}" alt="Legend" style="width: 100%; max-width: 180px; border-radius: 8px; margin-bottom: 15px;">
+                <h2 style="color: #aa55ff; margin: 5px 0;">LEGEND</h2>
+                <div style="font-size: 1.4rem; font-weight: bold; color: #55ff55; margin-bottom: 10px;">$4.50</div>
+                <p style="color: #aaaaaa; font-style: italic; font-size: 0.9rem;">Для активных строителей</p>
+
+                <ul style="text-align: left; margin: 15px 0; padding-left: 20px; line-height: 1.6; font-size: 0.95rem;">
+                    <li><strong>Приваты:</strong> 5 (макс. 50 000 блоков)</li>
+                    <li><strong>Точки дома:</strong> 5 sethome</li>
+                    <li><strong>Префикс:</strong> <code>[Legend]</code></li>
+                    <li><strong>Команды:</strong> всё из Prime + <code>/feed</code>, <code>/back</code></li>
+                    <li><strong>Опыт AuraSkills:</strong> +5% к опыту</li>
+                    <li><strong>Наборы:</strong> Улучшенный стартовый kit</li>
+                    <li><strong>Бонус сайта:</strong> 🎁 100 SweetCoin</li>
+                </ul>
+            </div>
+
+            <!-- Mythic -->
+            <div class="donate-card" style="background: rgba(20, 20, 30, 0.8); border: 1px solid #ffaa00; border-radius: 12px; padding: 20px; text-align: center;">
+                <img src="{{ url_for('static', filename='Statys/mythik.png') }}" alt="Mythic" style="width: 100%; max-width: 180px; border-radius: 8px; margin-bottom: 15px;">
+                <h2 style="color: #ffaa00; margin: 5px 0;">MYTHIC</h2>
+                <div style="font-size: 1.4rem; font-weight: bold; color: #55ff55; margin-bottom: 10px;">$7.50</div>
+                <p style="color: #aaaaaa; font-style: italic; font-size: 0.9rem;">Для тех, кто хочет больше уюта</p>
+
+                <ul style="text-align: left; margin: 15px 0; padding-left: 20px; line-height: 1.6; font-size: 0.95rem;">
+                    <li><strong>Приваты:</strong> 7 (макс. 80 000 блоков)</li>
+                    <li><strong>Точки дома:</strong> 7 sethome</li>
+                    <li><strong>Префикс:</strong> <code>[Mythic]</code></li>
+                    <li><strong>Команды:</strong> всё из Legend + <code>/enderchest</code>, <code>/repair</code></li>
+                    <li><strong>Опыт AuraSkills:</strong> +7% к опыту</li>
+                    <li><strong>Наборы:</strong> Расширенный kit (инструменты/броня)</li>
+                    <li><strong>Бонус сайта:</strong> 🎁 150 SweetCoin</li>
+                </ul>
+            </div>
+
+            <!-- Nova -->
+            <div class="donate-card" style="background: rgba(20, 20, 30, 0.8); border: 1px solid #ff3355; border-radius: 12px; padding: 20px; text-align: center;">
+                <img src="{{ url_for('static', filename='Statys/nova.png') }}" alt="Nova" style="width: 100%; max-width: 180px; border-radius: 8px; margin-bottom: 15px;">
+                <h2 style="color: #ff3355; margin: 5px 0;">NOVA</h2>
+                <div style="font-size: 1.4rem; font-weight: bold; color: #55ff55; margin-bottom: 10px;">$11.50</div>
+                <p style="color: #aaaaaa; font-style: italic; font-size: 0.9rem;">Элитный пакет максимум удобства</p>
+
+                <ul style="text-align: left; margin: 15px 0; padding-left: 20px; line-height: 1.6; font-size: 0.95rem;">
+                    <li><strong>Приваты:</strong> 10 (макс. 120 000 блоков)</li>
+                    <li><strong>Точки дома:</strong> 10 sethome</li>
+                    <li><strong>Префикс:</strong> <code>[Nova]</code></li>
+                    <li><strong>Команды:</strong> всё из Mythic + расширенная косметика</li>
+                    <li><strong>Опыт AuraSkills:</strong> +10% к опыту</li>
+                    <li><strong>Наборы:</strong> Топовый kit</li>
+                    <li><strong>Особое:</strong> Свечение префикса / частицы, Приватный чат поддержки</li>
+                    <li><strong>Бонус сайта:</strong> 🎁 250 SweetCoin</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Кнопка перехода в магазин Tebex -->
+        <div style="text-align: center; margin-top: 35px;">
+            <a href="https://sweet-home.tebex.io" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: linear-gradient(135deg, #28a745, #218838); color: white; padding: 15px 40px; border-radius: 8px; font-size: 1.2rem; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4); transition: transform 0.2s, background 0.2s;">
+                🛒 Купить донат в магазине
+            </a>
+        </div>
+
+        <div class="tip-box" style="margin-top: 30px;">
+            <strong>Срок действия статусов:</strong><br>
+            Каждый привилегированный статус действует <strong>30 дней</strong> с момента покупки. Статусы являются временными. По окончании срока все привилегии автоматически снимаются.
+        </div>
+    </article>
+</div>
+{% endblock %}

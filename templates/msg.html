@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-container">
+    <a href="/" class="back-btn">← На главную</a>
+
+    <article class="wiki-article">
+        <h1><img src="{{ url_for('static', filename='icons/index/paper.png') }}" alt="" class="card-icon"> Команды личных сообщений</h1>
+        <p class="subtitle">Полное руководство по отправке сообщений, игнорированию и настройке звуков.</p>
+
+        <hr>
+
+        <h2>Отправка личных сообщений</h2>
+        <ul class="rules-list">
+            <li><code>/msg &lt;ник&gt; &lt;сообщение&gt;</code> — отправить личное сообщение игроку.</li>
+            <li><code>/m &lt;ник&gt; &lt;сообщение&gt;</code> — сокращённая команда личного сообщения.</li>
+            <li><code>/tell &lt;ник&gt; &lt;сообщение&gt;</code> — альтернативная команда личного сообщения.</li>
+            <li><code>/w &lt;ник&gt; &lt;сообщение&gt;</code> — быстрое личное сообщение (whisper).</li>
+            <li><code>/pm &lt;ник&gt; &lt;сообщение&gt;</code> — личное сообщение игроку (private message).</li>
+        </ul>
+
+        <h2>Быстрый ответ</h2>
+        <ul class="rules-list">
+            <li><code>/r &lt;сообщение&gt;</code> — ответить последнему игроку, который писал вам.</li>
+            <li><code>/reply &lt;сообщение&gt;</code> — полная команда для ответа последнему игроку.</li>
+        </ul>
+
+        <h2>Приватность и блокировка</h2>
+        <ul class="rules-list">
+            <li><code>/ignore &lt;ник&gt;</code> — добавить игрока в чёрный список (игнорировать его сообщения).</li>
+            <li><code>/ig &lt;ник&gt;</code> — сокращённая команда игнорирования.</li>
+            <li><code>/msgtoggle</code> — полностью включить или отключить получение личных сообщений.</li>
+        </ul>
+
+        <h2>Настройка звука входящих сообщений</h2>
+        <p>Вы можете изменить звук уведомления при получении личного сообщения:</p>
+        <ul class="rules-list">
+            <li><code>/msgsound &lt;звук&gt;</code> — изменить звук входящих сообщений.</li>
+            <li><code>/pmsound &lt;звук&gt;</code> — альтернативная команда настройки звука.</li>
+        </ul>
+
+        <h3>Доступные звуки:</h3>
+        <ul class="rules-list">
+            <li><code>xp</code> — звук получения опыта</li>
+            <li><code>ghast</code> — звук гаста</li>
+            <li><code>ghastcry</code> — крик гаста</li>
+            <li><code>dragon</code> — рык дракона</li>
+            <li><code>wither</code> — звук визера</li>
+            <li><code>villager</code> — звук жителя</li>
+            <li><code>zombie</code> — звук зомби</li>
+            <li><code>off</code> — отключить звук уведомлений</li>
+        </ul>
+
+        <div class="tip-box">
+            <strong>Пример использования:</strong><br>
+            Чтобы поставить звук получения опыта на сообщения, введите: <code>/msgsound xp</code><br>
+            Чтобы ответить игроку без ввода его ника: <code>/r Привет!</code>
+        </div>
+    </article>
+</div>
+{% endblock %}

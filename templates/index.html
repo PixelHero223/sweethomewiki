@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="wiki-hero">
+    <h1>Неофициальная Вики Сервера</h1>
+    <p>Твой главный путеводитель по правилам, механикам, экономике и приватам нашего мира.</p>
+
+    <div class="ip-box">
+        <div style="margin-bottom: 8px;">
+            🎮 <strong>Java Edition:</strong> <span id="server-ip">sweethome.fun</span>
+            <button onclick="copyIP('sweethome.fun', this)">Копировать</button>
+        </div>
+        <div>
+            📱 <strong>Bedrock Edition (PE):</strong> <span>sweethome.fun</span> (Порт: <code>25648</code>)
+            <button onclick="copyIP('sweethome.fun:25648', this)">Копировать IP:Port</button>
+        </div>
+        </div>
+            <p style="margin-top: 15px;">
+                <a href="https://discord.gg/FvU5rzemEt" target="_blank" class="discord-hero-btn">
+                    💬 Присоединиться к Discord
+                </a>
+            </p>
+    </div>
+</div>
+
+<div class="wiki-cards">
+    <a href="/start" class="card-link">
+        <div class="card">
+            <h3><img src="{{ url_for('static', filename='icons/index/compas.png') }}" alt="" class="card-icon"> Начало игры</h3>
+        </div>
+    </a>
+
+    <a href="/rules" class="card-link">
+        <div class="card">
+            <h3><img src="{{ url_for('static', filename='icons/index/book.png') }}" alt="" class="card-icon"> Правила сервера</h3>
+        </div>
+    </a>
+
+    <a href="/economy" class="card-link">
+        <div class="card">
+            <h3><img src="{{ url_for('static', filename='icons/index/gold.png') }}" alt="" class="card-icon"> Экономика</h3>
+        </div>
+    </a>
+
+    <a href="/commands" class="card-link">
+        <div class="card">
+            <h3><img src="{{ url_for('static', filename='icons/index/redstoun.png') }}" alt="" class="card-icon"> Команды</h3>
+        </div>
+    </a>
+
+    <a href="/skills" class="card-link">
+        <div class="card">
+            <h3><img src="{{ url_for('static', filename='icons/index/enchanting.png') }}" alt="" class="card-icon"> Уровни</h3>
+        </div>
+    </a>
+
+    <a href="/stats" class="card-link">
+        <div class="card">
+            <h3><img src="{{ url_for('static', filename='icons/index/apple_gold.png') }}" alt="" class="card-icon"> Характеристики</h3>
+        </div>
+    </a>
+
+    <a href="/msg" class="card-link">
+        <div class="card">
+            <h3><img src="{{ url_for('static', filename='icons/index/paper.png') }}" alt="" class="card-icon"> Сообщения</h3>
+        </div>
+    </a>
+
+    <a href="/donate" class="card-link">
+        <div class="card">
+            <h3><img src="{{ url_for('static', filename='icons/index/star.png') }}" alt="" class="card-icon"> Статуси</h3>
+        </div>
+    </a>
+
+    <a href="/staff" class="card-link card-full">
+        <div class="card staff-banner">
+            <h3>🛡️ Набор в команду SWEETHOME</h3>
+        </div>
+    </a>
+
+</div>
+
+<div class="posts-section">
+    <h2>Последние объявления и обновления</h2>
+    {% for post in posts %}
+        <article class="post-preview">
+            <h3>{{ post[1] }}</h3>
+            <p>{{ post[2] }}</p>
+        </article>
+    {% else %}
+
+        <article class="post-preview">
+            <h3>📅 04.09.2026 🔔 ГЛОБАЛЬНОЕ ОБНОВЛЕНИЕ — СПАВНЕРЫ</h3>
+            <p>
+                На SweetHome обновлена система установки спавнеров! 💜<br><br>
+                <strong>🧱 Что изменилось?</strong><br>
+                Теперь в <strong>одном чанке можно установить только 1 спавнер</strong>.<br>
+                🔒 <code>1 чанк = 1 спавнер</code><br><br>
+                <strong>⚙️ Зачем это нужно?</strong><br>
+                Огромное количество спавнеров в одном чанке создаёт слишком много мобов, из-за чего значительно увеличивается нагрузка на сервер.<br><br>
+                Это может приводить к <strong>подвисаниям, снижению TPS и даже падениям сервера</strong>.<br><br>
+                Поэтому мы ввели ограничение, чтобы сделать работу SweetHome стабильнее и комфортнее для всех игроков. 🚀<br><br>
+                💜 Спасибо за понимание!
+            </p>
+        </article>
+
+        <article class="post-preview">
+            <h3>📅 28.08.2026 👾 Новое обновление — информация о мобах!</h3>
+            <p>
+                Теперь стало намного проще понимать, с какими мобами вы столкнулись! ⚔️<br><br>
+                <strong>Над каждым мобом теперь отображается:</strong><br>
+                🏷️ Его название<br>
+                ⭐ Уровень Аура-скилла (AuraSkills)<br><br>
+                Больше не нужно гадать, что это за моб и какого он уровня — вся информация сразу видна прямо над ним.<br><br>
+                💜 Заходите на SweetHome и проверяйте сами!
+            </p>
+        </article>
+
+        <article class="post-preview">
+            <h3>📅 26.08.2026 🎣 Обновление рыбалки!</h3>
+            <p>
+                Мы исправили проблему с системой рыбалки.<br><br>
+                🐟 <strong>Что было раньше?</strong><br>
+                У каждой пойманной рыбы был свой вес, из-за чего даже одинаковая рыба с разным весом не могла стакаться. В результате инвентарь быстро забивался множеством отдельных предметов. 😵‍💫<br><br>
+                ✅ <strong>Что изменилось?</strong><br>
+                Теперь рыба больше не имеет веса и спокойно стакается в один слот.<br><br>
+                🎣 Больше не нужно переживать, что после удачной рыбалки весь инвентарь будет забит одинаковой рыбой!<br><br>
+                💜 Приятной рыбалки на SweetHome!
+            </p>
+        </article>
+
+        <article class="post-preview">
+            <h3>📅 16.08.2026 — ⚠️ Важное объявление</h3>
+            <p>
+                На сервере введены новые ограничения чата:<br>
+                ⏱️ <strong>Лимит между сообщениями</strong> — 5 секунд.<br>
+                🆕 <strong>Для новых игроков</strong> установлен дополнительный лимит — 10 минут после входа.<br><br>
+                Ограничения введены из-за недавних ситуаций, связанных с распространением недостоверной информации и сливом данных со стороны отдельных лиц, связанных с сервером Чилл Зона.<br><br>
+                Мы также предупреждаем: если распространение личных данных и подобная деятельность продолжатся, имеющиеся материалы и соответствующие IP-адреса будут переданы в правоохранительные органы для разбирательства.<br><br>
+                Отдельно сообщаем, что у нас имеются материалы, которые, по нашему мнению, требуют проверки правоохранительными органами, в том числе информация о возможном сокрытии противоправных действий на стороне Чилл Зоны. Все соответствующие материалы могут быть предоставлены компетентным органам.<br><br>
+                ❗ <strong>Важно для игроков SweetHome:</strong><br>
+                Не воспринимайте распространяемую третьими лицами информацию как достоверную без проверки. Часть сообщений может быть намеренной дезинформацией, направленной на возвращение игроков и донатеров на их сервер.<br><br>
+                Мы не собираемся устраивать публичные разборки — все спорные вопросы будем решать через соответствующие органы и имеющиеся доказательства.<br><br>
+                Спасибо всем, кто остаётся с SweetHome. 💜
+            </p>
+        </article>
+
+        <article class="post-preview">
+            <h3>📅 11.08.2026 — 🎁 ОБНОВЛЁННАЯ СИСТЕМА НАГРАД!</h3>
+            <p>
+                Мы полностью переработали систему наград на SweetHome! 💜<br>
+                Теперь вместо старой системы с наградами за наигранное время вас ждут три типа наград — ежедневные, еженедельные и ежемесячные.<br><br>
+                🎟️ <strong>Как получить награды?</strong> Используйте команду: <code>/rws</code><br><br>
+                📅 <strong>Ежедневная награда:</strong> Каждый день вы можете получить 🔑 1× Ежедневный ключ.<br>
+                🗓️ <strong>Еженедельная награда:</strong> Раз в неделю 🔑 1× Золотой ключ.<br>
+                🏆 <strong>Ежемесячная награда:</strong> Раз в месяц вы получите сразу 🔑 Ежедневный ключ, 🔑 Золотой ключ, 👑 Ключ статусов, 🦸 Героический ключ.<br><br>
+                ⏱️ <strong>Что изменилось?</strong> Награда за наигранные часы на сервере полностью убрана.<br>
+                🔑 Не забывайте заходить каждый день и забирать свои награды!<br>
+                💜 Спасибо, что играете на SweetHome!
+            </p>
+        </article>
+
+        <article class="post-preview">
+            <h3>📅 11.08.2026 — 🎒 Обновление рюкзаков!</h3>
+            <p>
+                Мы внесли важные исправления в систему рюкзаков SweetHome. 💜<br><br>
+                🛡️ <strong>Вещи больше не пропадают!</strong><br>
+                Исправлена проблема, из-за которой содержимое рюкзака могло пропадать. Теперь все предметы надёжно сохраняются в вашем рюкзаке.<br><br>
+                🎒 <strong>Как открыть рюкзак?</strong><br>
+                Теперь достаточно использовать простую команду: <code>/bp</code><br><br>
+                ✨ Рюкзак обновлён и работает стабильно. Можете спокойно хранить в нём свои вещи!<br>
+                💜 Спасибо, что помогаете нам находить и исправлять ошибки.
+            </p>
+        </article>
+    {% endfor %}
+</div>
+
+<script>
+function copyIP(text) {
+    navigator.clipboard.writeText(text);
+    alert('Скопировано: ' + text);
+}
+</script>
+{% endblock %}

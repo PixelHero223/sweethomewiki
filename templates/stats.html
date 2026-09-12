@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-container">
+    <a href="/" class="back-btn">← Все навыки</a>
+
+    <article class="wiki-article">
+        <h1><img src="{{ url_for('static', filename='icons/index/apple_gold.png') }}" alt="" class="card-icon"> Характеристики персонажа</h1>
+        <p class="subtitle">Полное руководство по основным параметрам AuraSkills и их эффектам.</p>
+
+        <hr>
+
+        <h2>Основные параметры:</h2>
+        <ul class="rules-list">
+            <li>
+                <strong style="color: #ff5555;">Сила:</strong>
+                Увеличивает урон от атаки с помощью различного оружия.
+            </li>
+            <li>
+                <strong style="color: #ff7373;">Здоровье:</strong>
+                Увеличивает количество имеющихся у вас ЖИЗНЕЙ.
+            </li>
+            <li>
+                <strong style="color: #ffaa00;">Регенерация:</strong>
+                Увеличивает скорость восстановления здоровья и маны.
+            </li>
+            <li>
+                <strong style="color: #55ff55;">Критический шанс:</strong>
+                Шансы нанести критический удар при атаке.
+            </li>
+            <li>
+                <strong style="color: #00ffff;">Критический урон:</strong>
+                Процентное увеличение урона при нанесении критического удара.
+            </li>
+            <li>
+                <strong style="color: #ffffff;">Скорость:</strong>
+                Повышает скорость ходьбы и бега персонажа.
+            </li>
+            <li>
+                <strong style="color: #55ff55;">Удача:</strong>
+                Увеличивает вероятность выпадения дополнительных блоков при получении навыков.
+            </li>
+            <li>
+                <strong style="color: #5555ff;">Мудрость:</strong>
+                Увеличивает ваш максимальный запас маны, получаемый опыт и снижает затраты на наковальню.
+            </li>
+            <li>
+                <strong style="color: #aa00aa;">Стойкость:</strong>
+                Увеличивает урон, уменьшаемый от атак противника.
+            </li>
+        </ul>
+
+        <div class="tip-box">
+            💡 <strong>Как прокачивать характеристики?</strong><br>
+            Характеристики прокачиваются автоматически при повышении уровней соответствующих навыков (Шахтер, Лесоруб, Алхимия, Рыбак, Зачарователь и др.).
+        </div>
+    </article>
+</div>
+{% endblock %}

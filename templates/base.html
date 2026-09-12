@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWEETHOME WIKI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">SWEETHOME WIKI</div>
+
+        <a href="https://discord.gg/yWaVJT6kf" target="_blank" class="discord-btn">
+            💬 Наш Discord
+        </a>
+    </header>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+    <div id="pixel-flip-overlay"></div>
+</body>
+</html>

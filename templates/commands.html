@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-container">
+    <a href="/" class="back-btn">← На главную</a>
+
+    <article class="wiki-article">
+        <h1><img src="{{ url_for('static', filename='icons/index/redstoun.png') }}" alt="" class="card-icon"> Основные команды и механики</h1>
+        <p class="subtitle">Быстрый справочник по всем необходимым командам для комфортной игры.</p>
+
+        <hr>
+
+        <h2>Основные и навигация</h2>
+        <div class="commands-list">
+            <div class="cmd-item">
+                <code>/spawn</code> — Телепортироваться на главный спавн сервера.
+            </div>
+            <div class="cmd-item">
+                <code>/sethome [название]</code> — Сохранить точку дома (например, <code>/sethome home</code>).
+            </div>
+            <div class="cmd-item">
+                <code>/home [название]</code> — Телепортироваться к себе домой.
+            </div>
+            <div class="cmd-item">
+                <code>/delhome [название]</code> — Удалить точку дома.
+            </div>
+            <div class="cmd-item">
+                <code>/tpa [ник]</code> — Отправить запрос на телепортацию к игроку.
+            </div>
+            <div class="cmd-item">
+                <code>/tpahere [ник]</code> — Запросить телепортацию игрока к вам.
+            </div>
+            <div class="cmd-item">
+                <code>/tpaccept</code> — Принять запрос на телепортацию.
+            </div>
+        </div>
+
+        <h2>Приват территории (Lands / GriefPrevention)</h2>
+        <div class="commands-list">
+            <div class="cmd-item">
+                <code>/claim</code> — Заприватить территорию, на которой вы стоите.
+            </div>
+            <div class="cmd-item">
+                <code>/trust [ник]</code> — Добавить друга в свой приват (дать права на строительство).
+            </div>
+            <div class="cmd-item">
+                <code>/untrust [ник]</code> — Удалить игрока из своего привата.
+            </div>
+            <div class="cmd-item">
+                <code>/abandonclaim</code> — Удалить приват, на котором вы находитесь.
+            </div>
+        </div>
+
+        <h2>Экономика и работы</h2>
+        <div class="commands-list">
+            <div class="cmd-item">
+                <code>/balance</code> или <code>/bal</code> — Проверить свой баланс.
+            </div>
+            <div class="cmd-item">
+                <code>/pay [ник] [сумма]</code> — Перевести деньги другому игроку.
+            </div>
+            <div class="cmd-item">
+                <code>/jobs browse</code> — Открыть меню выбора работ.
+            </div>
+            <div class="cmd-item">
+                <code>/shop</code> — Открыть магазин сервера.
+            </div>
+            <div class="cmd-item">
+                <code>/ah</code> — Открыть игровой аукцион.
+            </div>
+        </div>
+
+        <h2>Рюкзак и инвентарь</h2>
+        <div class="commands-list">
+            <div class="cmd-item">
+                <code>/bp</code> — открыть ваш личный рюкзак для хранения предметов.
+            </div>
+        </div>
+
+        <h2>Уникальные механики сервера</h2>
+        <ul>
+            <li><strong>Личный рюкзак (<code>/bp</code>):</strong> Начальная вместимость рюкзака — <strong>9 слотов</strong>. Донат-статусы расширяют рюкзак (+9 слотов за каждый статус: <code>PRIME</code> &lt; <code>LEGEND</code> &lt; <code>MYTHIC</code> &lt; <code>NOVA</code>).</li>
+            <li><strong>Аукцион (<code>/ah</code>):</strong> Можно выставлять максимум <strong>15 предметов одновременно</strong> (ограничение создано для того, чтобы аукцион не использовали как бесплатную сумку).</li>
+            <li><strong>Система уровней:</strong> Повышайте уровни в разных сферах, чтобы открывать новые товары в <code>/shop</code>.</li>
+            <li><strong>Лимит работ:</strong> Одновременно можно выбрать максимум <strong>3 работы</strong>.</li>
+        </ul>
+
+        <h2>Как привязать аккаунт Discord</h2>
+            <ol style="margin-left: 20px; line-height: 1.8;">
+                <li>Зайдите на сервер <strong>Ванилла</strong>.</li>
+                <li>Выполните команду в чате: <code>/discord link</code></li>
+                <li>Получите секретный код привязки.</li>
+                <li>Отправьте полученный код в личные сообщения боту <strong>@SweetHome Bot</strong>.</li>
+            </ol>
+            <p style="margin-top: 10px; color: #55ff55;"><strong>✅ Готово!</strong> Ваш аккаунт успешно привязан.</p>
+
+        <hr style="margin: 30px 0;">
+
+        <h2>Создание кастомных картин</h2>
+        <p>Вы можете переносить любые изображения из интернета прямо на карты в игре!</p>
+
+        <div class="commands-list">
+            <div class="cmd-item">
+                <code>/if create название ссылка ширина высота</code> — Создать новую картину из ссылки.
+            </div>
+            <div class="cmd-item">
+                <code>/if clone</code> — Клонировать картину, которую вы держите в руке.
+            </div>
+        </div>
+
+        <h3>Необходимые карты в руке:</h3>
+        <p>Для создания картины у вас в главной руке должно быть необходимое количество чистых карт:</p>
+        <ul>
+            <li><strong>1x1</strong> — 1 карта</li>
+            <li><strong>2x2</strong> — 4 карты</li>
+            <li><strong>3x3</strong> — 9 карт</li>
+        </ul>
+
+        <h3>Цены на создание:</h3>
+        <ul>
+            <li>Картина <strong>1x1</strong> — <code>50 SweetCoin</code></li>
+            <li>Картина <strong>2x2</strong> — <code>100 SweetCoin</code></li>
+            <li>Картина <strong>3x3</strong> — <code>250 SweetCoin</code></li>
+            <li>Клонирование картин (<code>/if clone</code>) — <code>50 SweetCoin</code></li>
+        </ul>
+
+        <div class="tip-box">
+            <strong>Пример использования:</strong><br>
+            <code>/if create my_art https://cdn.discordapp.com/attachments/1492583036821180426/1492583036909256914/image.png?ex=6a9cff86&amp;is=6a9bae06&amp;hm=9ba970aa1c1b054c3c431042b3de07a23fc823e6232a08160e2df70137c3e699&amp; 1 1</code><br><br>
+            <strong>Совет:</strong> Рекомендуется загрузить картинку в Discord (в личные сообщения или на свой сервер), ПКМ по картинке → <strong>Копировать ссылку</strong> (Copy Link) и вставить её в команду.
+        </div>
+    </article>
+</div>
+{% endblock %}

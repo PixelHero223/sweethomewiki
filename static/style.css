@@ -1,0 +1,483 @@
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --accent-color: #4e2e7d;
+    --accent-hover: #5f388e;
+    --text-color: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --border-color: #333333;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    background-color: #0f0f0f;
+    padding: 15px 30px;
+    border-bottom: 2px solid var(--accent-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #794caf;
+    letter-spacing: 1px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.wiki-hero {
+    text-align: center;
+    padding: 35px 20px;
+    background: linear-gradient(180deg, #1f1b28 0%, var(--card-bg) 100%);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 25px;
+}
+
+.wiki-hero h1 {
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.wiki-hero p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+.ip-box {
+    margin-top: 15px;
+    background: #000000;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px dashed var(--accent-color);
+}
+
+.ip-box span {
+    color: #794caf;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.1rem;
+    margin: 0 10px;
+}
+
+.ip-box button {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.ip-box button:hover {
+    background: var(--accent-hover);
+}
+
+.wiki-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.posts-section {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.post-preview {
+    background: #252525;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+    border-left: 3px solid #744caf;
+}
+
+.post-preview h3 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.page-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.back-btn {
+    display: inline-block;
+    color: #7c4caf;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+.wiki-article {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.wiki-article h1 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.wiki-article .subtitle {
+    color: #a0a0a0;
+    font-size: 1.1rem;
+}
+
+.wiki-article h2 {
+    color: #654caf;
+    margin-top: 25px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.wiki-article hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 20px 0;
+}
+
+.code-block {
+    background: #0d0d0d;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border-left: 3px solid #8e4caf;
+    margin: 10px 0;
+    font-family: monospace;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card-link .card:hover {
+    border-color: #704caf;
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+
+/* Кнопка Discord у шапці */
+.discord-btn {
+    background-color: #5865F2;
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.discord-btn:hover {
+    background-color: #4752C4;
+}
+
+/* Блок кнопок на головному банері */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+/* Велика кнопка Discord на головній */
+.discord-hero-btn {
+    background-color: #5865F2;
+    color: white;
+    text-decoration: none;
+    padding: 9px 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: inline-block;
+    transition: background 0.2s;
+}
+
+.discord-hero-btn:hover {
+    background-color: #4752C4;
+}
+
+.rules-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.rules-list li {
+    background: #252525;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border-left: 3px solid #442e7d;
+    line-height: 1.5;
+}
+
+.rules-list li strong {
+    color: #7c4caf;
+    margin-right: 5px;
+}
+
+.jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.job-card {
+    background: #252525;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 3px solid #744caf;
+}
+
+.job-card h3 {
+    margin-top: 0;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.job-card ul {
+    padding-left: 18px;
+    margin-bottom: 0;
+}
+
+.tip-box {
+    background: #211b28;
+    border: 1px solid #4b2e7d;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+    color: #e0e0e0;
+}
+
+.job-limit-badge {
+    background: rgba(123, 44, 191, 0.2);
+    border: 1px solid var(--accent-color);
+    color: var(--accent-light);
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+/* Оформление скриншотов меню (GUI) */
+.gui-preview {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.gui-preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    background-color: #000;
+}
+
+.commands-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.cmd-item {
+    background: #1e1e1e;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border-left: 3px solid var(--accent-color);
+    font-size: 0.95rem;
+}
+
+.cmd-item code {
+    background: #0d0d0d;
+    color: var(--accent-light);
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+.card-full {
+    grid-column: 1 / -1;
+}
+
+.staff-banner {
+    background: linear-gradient(90deg, #1e1e1e 0%, var(--accent-bg) 100%);
+    border: 1px solid var(--accent-color);
+    text-align: center;
+    padding: 25px 20px;
+}
+
+.staff-banner h3 {
+    color: var(--accent-light);
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.staff-banner p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.card h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.card h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Заголовки категорій */
+.staff-category-title {
+  border-bottom: 2px solid var(--accent-color, #7289da);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+/* Сітка для карток */
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Картка члена команди */
+.staff-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.staff-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-color, #7289da);
+}
+
+/* Аватарка Майнкрафт */
+.staff-avatar {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5));
+}
+
+/* Інформація */
+.staff-info h4 {
+  margin: 0 0 5px 0;
+  font-size: 1.2rem;
+}
+
+.staff-info p {
+  margin: 8px 0 0 0;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* Плашки (Бейджі) ролей */
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.badge-owner {
+  background-color: #a855f7;
+  color: #fff;
+}
+
+.badge-admin {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+.badge-mod {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+.badge-helper {
+  background-color: #10b981;
+  color: #fff;
+}
+
+.badge-dev {
+  background-color: #06b6d4; /* Бірюзовий колір для веб-розробника */
+  color: #fff;
+}

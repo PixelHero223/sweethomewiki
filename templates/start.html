@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-container">
+    <a href="/" class="back-btn">← На главную</a>
+
+    <article class="wiki-article">
+        <h1><img src="{{ url_for('static', filename='icons/index/compas.png') }}" alt="" class="card-icon"> Начало игры на SWEETHOME</h1>
+        <p class="subtitle">Полное руководство для новых игроков: от первого входа до постройки дома.</p>
+
+        <hr>
+
+        <h2>1. Как подключиться к серверу</h2>
+            <p>Сервер поддерживает подключение как с ПК (Java Edition), так и с мобильных устройств и консолей (Bedrock Edition):</p>
+
+        <h3>Для ПК (Java Edition):</h3>
+            <p>Вам понадобится версия Minecraft от <strong>1.21.8</strong> до <strong>26.X</strong>.</p>
+            <ul>
+                <li>Запустите TLauncher, Prism или официальный лаунчер.</li>
+                <li>Перейдите в раздел <strong>«Сетевая игра» (Multiplayer)</strong> → <strong>«Добавить»</strong>.</li>
+                <li>В поле «Адрес сервера» введите: <code>sweethome.fun</code></li>
+            </ul>
+
+        <h3>Для телефонов и консолей (Bedrock / Pocket Edition):</h3>
+            <p>Поддерживаются последние актуальные версии Bedrock Edition.</p>
+            <div class="code-block">
+                • <strong>IP / Адрес сервера:</strong> <code>sweethome.fun</code><br>
+                • <strong>Порт:</strong> <code>25648</code>
+            </div>
+
+        <h2>2. Регистрация и авторизация</h2>
+        <p>При первом входе на сервер вам нужно создать пароль для защиты аккаунта:</p>
+        <div class="code-block">
+            <code>/register [пароль] [повторите_пароль]</code>
+        </div>
+        <p>При следующих входах используйте команду:</p>
+        <div class="code-block">
+            <code>/login [ваш_пароль]</code>
+        </div>
+
+        <h2>3. Защита территории (Приват)</h2>
+        <p>Чтобы другие игроки не могли сломать ваш дом или забрать вещи из сундуков, обязательно заприватьте участок:</p>
+        <ol>
+            <li>Возьмите деревянний топорик командой <code>//wand</code> или крафтом.</li>
+            <li>Отметьте первый угол участка левой кнопкой мыши (ЛКМ).</li>
+            <li>Отметьте противоположный угол по диагонали правой кнопкой мыши (ПКМ).</li>
+            <li>Расширьте выделение вверх и вниз: <code>//expand vert</code></li>
+            <li>Создайте приват: <code>/claim [название_региона]</code></li>
+        </ol>
+
+        <h2>4. Полезные начальные команды</h2>
+        <ul>
+            <li><code>/spawn</code> — вернуться на спавн сервера.</li>
+            <li><code>/sethome [название]</code> — сохранить точку дома.</li>
+            <li><code>/home</code> — телепортироваться домой.</li>
+            <li><code>/menus</code> — открыть главное меню сервера.</li>
+        </ul>
+    </article>
+</div>
+{% endblock %}

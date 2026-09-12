@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-container">
+    <a href="/" class="back-btn">← На главную</a>
+
+    <article class="wiki-article">
+        <h2><img src="{{ url_for('static', filename='icons/index/enchanting.png') }}" alt="" class="card-icon"> Ваши навыки </h2>
+        <p>Используйте команду <code>/skills</code> в игре, чтобы открыть это меню.</p>
+
+        <div style="text-align: center; margin-bottom: 25px;">
+            <img src="{{ url_for('static', filename='images/skill.png') }}" alt="Навыки и уровни SweetHome" style="max-width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--accent-color);">
+        </div>
+
+        <div class="wiki-cards">
+            <a href="/skills/archer" class="card-link">
+                <div class="card">
+                    <h3><img src="{{ url_for('static', filename='icons/skill/bow.png') }}" alt="" class="card-icon"> Лучник (Archer)</h3>
+                </div>
+            </a>
+
+            <a href="/skills/fighter" class="card-link">
+                <div class="card">
+                    <h3><img src="{{ url_for('static', filename='icons/skill/sword.png') }}" alt="" class="card-icon"> Борец (Fighter)</h3>
+                </div>
+            </a>
+
+            <a href="/skills/defender" class="card-link">
+                <div class="card">
+                    <h3><img src="{{ url_for('static', filename='icons/skill/koljuga.png') }}" alt="" class="card-icon"> Защитник (Defender)</h3>
+                </div>
+            </a>
+
+            <a href="/skills/farmer" class="card-link">
+                <div class="card">
+                    <h3><img src="{{ url_for('static', filename='icons/skill/hoe.png') }}" alt="" class="card-icon"> Фермер (Farmer)</h3>
+                </div>
+            </a>
+
+            <a href="/skills/lumberjack" class="card-link">
+                <div class="card">
+                    <h3><img src="{{ url_for('static', filename='icons/skill/axe.png') }}" alt="" class="card-icon"> Лесоруб (Lumberjack)</h3>
+                </div>
+            </a>
+
+            <a href="/skills/mining" class="card-link">
+                <div class="card">
+                    <h3><img src="{{ url_for('static', filename='icons/skill/pickaxe.png') }}" alt="" class="card-icon"> Шахтер (Mining)</h3>
+                </div>
+            </a>
+
+            <a href="/skills/fisherman" class="card-link">
+                <div class="card">
+                    <h3><img src="{{ url_for('static', filename='icons/skill/fishing_rod.png') }}" alt="" class="card-icon"> Рыбак (Fisherman)</h3>
+                </div>
+            </a>
+
+            <a href="/skills/agricultural" class="card-link">
+                <div class="card">
+                    <h3><img src="{{ url_for('static', filename='icons/skill/shovel.png') }}" alt="" class="card-icon"> Сельхоз (agricultural)</h3>
+                </div>
+            </a>
+
+            <a href="/skills/dexterity" class="card-link">
+                <div class="card">
+                    <h3><img src="{{ url_for('static', filename='icons/skill/feather.png') }}" alt="" class="card-icon"> Ловкость (Agility)</h3>
+                </div>
+            </a>
+
+            <a href="/skills/alchemy" class="card-link">
+                <div class="card">
+                    <h3><img src="{{ url_for('static', filename='icons/skill/bottal.png') }}" alt="" class="card-icon"> Алхимия (Alchemy)</h3>
+                </div>
+            </a>
+
+            <a href="/skills/enchanter" class="card-link">
+                <div class="card">
+                    <h3><img src="{{ url_for('static', filename='icons/skill/enchantment.png') }}" alt="" class="card-icon"> Зачарователь (Enchanter)</h3>
+                </div>
+            </a>
+        </div>
+    </article>
+</div>
+{% endblock %}

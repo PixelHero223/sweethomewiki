@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-container">
+    <a href="/skills" class="back-btn">← Все навыки</a>
+
+    <article class="wiki-article">
+        <h1><img src="{{ url_for('static', filename='icons/skill/bottal.png') }}" alt="" class="card-icon"> Навык: Алхимия (Alchemy)</h1>
+        <p class="subtitle">Варите и бросайте зелья, чтобы заработать алхимию ОПЫТ!</p>
+
+        <hr>
+
+        <h2>Повышаемые характеристики:</h2>
+        <ul>
+            <li><strong style="color: #0000aa;">Мудрость</strong></li>
+            <li><strong style="color: #ff5555;">Здоровье</strong></li>
+        </ul>
+        <a href="/stats" class="btn-stats" style="display: inline-block; margin-top: 10px; padding: 8px 14px; background: rgba(0, 170, 255, 0.15); border: 1px solid #00aaff; color: #00aaff; border-radius: 6px; text-decoration: none; font-size: 0.9em; transition: 0.2s;">
+            🔍 Подробнее о характеристиках
+        </a>
+
+        <h2>Пассивные способности навыка:</h2>
+        <ul class="rules-list">
+            <li><strong>Алхимик:</strong> Увеличивает срок действия сваренных и используемых зелий (+3.5% за уровень).</li>
+            <li><strong>Пивовар:</strong> Увеличивает количество получаемого опыта навыка (XP) на 10% за уровень.</li>
+            <li><strong>Кража жизни:</strong> Даёт шанс восстановить здоровье в размере процента от нанесённого урона (1.75% за уровень).</li>
+            <li><strong>Золотое сердце:</strong> Снижает входящий урон по персонажу (-4% за уровень).</li>
+            <li><strong>Мудрый эффект:</strong> Увеличивает показатель «Мудрость» за каждый активный зельеварческий эффект на персонаже (+1 за уровень за эффект).</li>
+        </ul>
+
+        <h2>🏆 Топ способов прокачки Алхимии (1-3 место):</h2>
+        <ul class="rules-list">
+            <li><strong>🥇 1 место — Съесть зачарованное золотое яблоко:</strong> ОПЫТ 500</li>
+            <li><strong>🥈 2 место — Использовать улучшенное затяжное зелье:</strong> ОПЫТ: 70</li>
+            <li><strong>🥉 3 место — Использовать затяжное зелье длительного действия:</strong> ОПЫТ: 70</li>
+        </ul>
+
+    </article>
+</div>
+
+{% endblock %}
